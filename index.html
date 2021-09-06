@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resources/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="./resources/vendors/font/Fontawsome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet" />
+    <script src="./resources/js/scripts.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="popup">
+        <iframe src="" class = "popup__content" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder= "0">
+        </iframe>
+        <button class="popup__close btn" onclick="popup_close();">
+            ✖
+          </button>
+    </div>
+    <header class = "header">
+        <div class="header__box-logo">
+            <div class="header__logo-img">
+                <img src="./resources/img/logo.jpg" alt="PS5 logo" />
+            </div>
+            <div class="header__logo-light-ray">
+                <span class="header__logo-light-ray--up-down"> </span>
+                <span class="header__logo-light-ray--down-up"></span>
+                <span class="header__logo-light-ray--left-right"></span>
+                <span class="header__logo-light-ray--right-left"></span>
+            </div>
+        </div>
+        <nav class="header__section-descript">
+            <ul>
+                <li class= "section-descript"> <p>new design</p> </li>
+                <li class= "section-descript"> <p>new power</p> </li>
+                <li class= "section-descript"> <p>new feature</p> </li>
+                <li class= "section-descript"> <p>controller</p> </li>
+            </ul>
+        </nav>
+        <div class=heading-primary ">
+            <div class="heading-primary--play">
+                <b>P</b>lay
+            </div>
+            <div class="heading-primary--station ">
+                <b>S</b>tation<sup>®</sup>5
+            </div>
+        </div>
+        <button class="header__btn btn btn--style-1" onclick= "popup_show(watch_us);">
+            <p>Watch now</p> 
+            <span class="btn__light-ray--left-right"></span>
+            <span class="btn__light-ray--right-left"></span>                 
+        </button>
+        <div class="header__background background">
+            <video autoplay muted loop src="./resources/video/header__bg.webm" class="bg-vid">
+        </video>
+        </div> 
+    </header>
+
+    <section class="design-intro">
+        <div class="design-intro__heading">
+                <p class="design-intro__heading--unique">unique</p>
+                <p class="design-intro__heading--design">-design-</p>
+        </div>
+        <div class="design-intro__content">
+            <div class="design-intro__item">
+                <button class="btn design-intro__product white-edition" onclick="popup_show(white_edition);">
+                    <img src="./resources/img/product--white-edition.png" alt="white-edition" class="white-edition" />
+                    <div class="design-intro__descript">
+                        <p class="design-intro__descript-text--lg">White</p>
+                        <p class="design-intro__descript-text--sm">Edition</p>
+                    </div>
+                </button>
+            </div>
+            <div class="design-intro__item">
+                <button class="btn design-intro__product black-edition" onclick="popup_show(black_edition);">
+                    <img src="./resources/img/product--black-edition.png" alt="black-edition" class="black-edition" />
+                    <div class="design-intro__descript">
+                        <p class="design-intro__descript-text--lg">Black</p>
+                        <p class="design-intro__descript-text--sm">Edition</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="design-intro__background background">
+            <video autoplay muted loop src="./resources/video/design-intro__bg.webm" class="bg-vid"></video>
+        </div>
+    </section>
+    <section class="power-intro"> 
+        <div class="power-intro__left">
+                <div class="power-intro__speed">
+                    <img src="./resources/img/icon__speed.png" alt="icon__speed" class="power-intro__icon icon__speed" />
+                    <div class="power-intro__descript">
+                        <p class="power-intro__descript--main">
+                            Ultra-high speed SSD
+                        </p>
+                        <p class="power-intro__descript--sub">                    
+                            Maximize your play sessions with near-instant load times for installed PS5™ games.
+                        </p>
+                    </div>
+                </div>
+                <div class="power-intro__IO">
+                    <img src="./resources/img/icon__io.png" alt="icon__IO" class="power-intro__icon icon__IO">
+                    <div class="power-intro__descript">
+                        <p class="power-intro__descript--main">
+                            Integrated I/O
+                        </p>
+                        <p class="power-intro__descript--sub">                    
+                            The custom integration of the PS5 console's systems lets creators pull data from the SSD so quickly that they can design games in ways never before possible.
+                        </p>
+                    </div> 
+                </div>
+
+        </div>
+        <div class="power-intro__right">
+            <div class="power-intro__heading">
+                <p class="power-intro__heading--play-has">Play Has</p>
+                <p class="power-intro__heading--no-limit">No Limits™</p>
+        </div>
+            <div class="power-intro__thumbnail-group">
+
+                <div class="power-intro__thumbnail-item power-intro__thumbnail--left" onclick="popup_show(thumbnail_left);">
+                    <img src="./resources/img/power-intro__thumbnail--left.jpg" class="power-intro__thumbnail-img" alt="" />
+                    <div class="box-icon-play">
+                        <div class="icon-play "></div>
+                    </div>
+                </div>
+                <div class="power-intro__thumbnail-item power-intro__thumbnail--center" onclick="popup_show(thumbnail_center);">
+                    <img src="./resources/img/power-intro__thumbnail--center.jpg" class="power-intro__thumbnail-img" alt="" />
+                    <div class="btn box-icon-play" >
+                        <div class="icon-play "></div>
+                    </div>
+                </div>
+                <div class=" power-intro__thumbnail-item power-intro__thumbnail--right" onclick="popup_show(thumbnail_right);">
+                    <img src="./resources/img/power-intro__thumbnail--right.jpg" class="power-intro__thumbnail-img" alt="" />
+                    <div class="box-icon-play">
+                        <div class="icon-play "></div>
+                    </div>
+                </div>
+            </div>
+            <div class="power-intro__lightning-speed">
+                <p class="power-intro__descript--main">
+                    Lightning speed
+                </p>
+                <p class="power-intro__descript--sub">
+                    Harness the power of a custom CPU, GPU and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do.
+                </p>
+            </div>
+        </div> 
+
+
+        <div class="power-intro__background background">
+            <img src="./resources/img/power-intro__background.jpg" alt="background">
+        </div>
+
+
+    </section>
+    <section class="feature-intro">
+        <div class="feature-intro__left">
+                <div class="feature-intro__heading--main">Stunning games</div>
+                <div class="feature-intro__heading--sub">
+                    Marvel at incredible graphics and experience new PS5 features.
+                </div>
+
+                <div class="feature-intro__feature-list">
+                    <button class="btn feature-intro__btn feature-intro__btn-next " onclick="next_feature()">
+                        <i class="fas fa-chevron-circle-right"></i>
+                    </button>
+                    <button class="btn feature-intro__btn feature-intro__btn-back feature-intro__btn--lock" onclick="back_feature()">
+                        <i class="fas fa-chevron-circle-right"></i>
+                    </button>
+                    <div class="feature-intro__feature-item feature-intro__feature--show feature1 ">
+                        <img src="./resources/img/rt.png" class = "feature-intro__feature-img" alt="feature img"  />
+                        <p class="feature-intro__feature-descript--main">Ray tracing</p>
+                        <p class="feature-intro__feature-descript--sub">
+                            Immerse yourself in worlds with a new level of realism as rays of light are individually simulated, creating true-to-life shadows and reflections in supported PS5 games.
+                        </p>
+                    </div>
+                    <div class="feature-intro__feature-item feature2">
+                        <img src="./resources/img/4ktv.png" class = "feature-intro__feature-img" alt="feature img"  />
+                        <p class="feature-intro__feature-descript--main">4K-TV gaming</p>
+                        <p class="feature-intro__feature-descript--sub">
+                            Play your favorite PS5 games on your stunning 4K TV.
+                        </p>
+                    </div>
+                    <div class="feature-intro__feature-item feature3">
+                        <img src="./resources/img/fps.png" class = "feature-intro__feature-img" alt="feature img"  />
+                        <p class="feature-intro__feature-descript--main">Up to 120fps with 120Hz output</p>
+                        <p class="feature-intro__feature-descript--sub">
+                            Enjoy smooth and fluid high frame rate gameplay at up to 120fps for compatible games, with support for 120Hz output on 4K displays.
+                        </p>
+                    </div>
+                    <div class="feature-intro__feature-item feature4">
+                        <img src="./resources/img/hdr.png" class = "feature-intro__feature-img" alt="feature img"  />
+                        <p class="feature-intro__feature-descript--main">HDR technology</p>
+                        <p class="feature-intro__feature-descript--sub">
+                            With an HDR TV, supported PS5 games display an unbelievably vibrant and lifelike range of colors.
+                        </p>
+                    </div>
+                    <div class="feature-intro__feature-item feature5">
+                        <img src="./resources/img/audio.png" class = "feature-intro__feature-img" alt="feature img"  />
+                        <p class="feature-intro__feature-descript--main">Tempest 3D AudioTech</p>
+                        <p class="feature-intro__feature-descript--sub">
+                            Immerse yourself in soundscapes where it feels as if the sound comes from every direction. Your surroundings truly come alive with Tempest 3D AudioTech with compatible headphones in supported games.
+                        </p>
+                    </div>
+                    <div class="feature-intro__feature-item feature6">
+                        <img src="./resources/img/8ksup.png" class = "feature-intro__feature-img" alt="feature img"  />
+                        <p class="feature-intro__feature-descript--main">8K support</p>
+                        <p class="feature-intro__feature-descript--sub">
+                            The PS5 console is compatible with 8K displays through HDMI 2.1 support.
+                        </p>
+                    </div>
+                
+                </div>
+        </div>
+        <div class="feature-intro__right"> 
+            <div class="feature-intro__right-background">
+                <img src="./resources/img/silde (1).jpg" alt="background" class = "feature-intro__right-background-img" />
+                <img src="./resources/img/silde (2).jpg " alt="background" class = "feature-intro__right-background-img" />
+                <img src="./resources/img/silde (3).jpg " alt="background" class = "feature-intro__right-background-img" />
+                <img src="./resources/img/silde (4).jpg " alt="background" class = "feature-intro__right-background-img" />
+                <img src="./resources/img/silde (5).jpg " alt="background" class = "feature-intro__right-background-img" />
+                <img src="./resources/img/silde (6).jpg " alt="background" class = "feature-intro__right-background-img" />
+                <img src="./resources/img/slide (7).jpg" alt="background" class = "feature-intro__right-background-img" />
+            </div>
+            <div class="feature-intro__right-slide">
+                <img src="./resources/img/silde (1).jpg" alt="img" class = "feature-intro__right-slide-img" />
+                <img src="./resources/img/silde (2).jpg" alt="img" class = "feature-intro__right-slide-img" />
+                <img src="./resources/img/silde (3).jpg" alt="img" class = "feature-intro__right-slide-img" />
+                <img src="./resources/img/silde (4).jpg" alt="img" class = "feature-intro__right-slide-img" />
+                <img src="./resources/img/silde (5).jpg" alt="img" class = "feature-intro__right-slide-img" />
+                <img src="./resources/img/silde (6).jpg" alt="img" class = "feature-intro__right-slide-img" />
+                <img src="./resources/img/slide (7).jpg" alt="img" class = "feature-intro__right-slide-img" />
+            </div>
+        
+        </div>
+    </section>
+    <section class="controller-intro">
+        <div class="midle"></div>
+        <div class="controller-intro__left">
+            <div class="controller-intro__heading">Heighten Your Senses™</div>
+            <button class="controller-intro__btn btn btn--style-1" onclick= "popup_show(controller_intro);">
+                <p>Watch now</p>
+                <span class="btn__light-ray--left-right"></span>
+                <span class="btn__light-ray--right-left"></span>                 
+            </button> 
+        </div>
+
+        <div class="controller-intro__feature feature1">
+            <img src="./resources/img/icon__adaptive-tringer.png" class = "controller-intro__icon"alt="feature-icon" />
+            <p class=" controller-intro__feature-descript--main">Adaptive triggers</p>
+        </div>
+        <p class="controller-intro__feature-descript--sub">
+            Get to grips with immersive adaptive triggers, featuring dynamic resistance levels which simulate the physical impact of in-game activities in select PS5 games.
+        </p>
+        <div class=" controller-intro__feature feature2">
+            <img src="./resources/img/icon__haptic-feedback.png" class = "controller-intro__icon"alt="feature-icon" />
+            <p class = "controller-intro__feature-descript--main">Haptic feedback</p>
+        </div>
+
+        <p class="controller-intro__feature-descript--sub">
+            Experience haptic feedback via the DualSense wireless controller in select PS5 titles and feel the effects and impact of your in-game actions through dynamic sensory feedback.
+        </p>
+
+        <div class="background controller-intro__background">
+            <video src="./resources/video/controller-intro__bg.webm" class="bg-vid" autoplay muted loop></video>
+        </div>
+        
+    </section>  
+    <section class="footer">
+        <div class="footer__content">
+            <div class="col col-1-of-3 footer__short-link">
+                <h1 class="footer__heading">Short link</h1>
+                <ul>
+                  <li>
+                    <a href="https://www.playstation.com/en-us/support" target="blank"
+                      >Support</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.playstation.com/en-us/legal/privacy-policy"
+                      target="blank"
+                      >Privacy-policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.esrb.org/ratings-guide" target="blank"
+                      >About raiting</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://partners.playstation.net" target="blank"
+                      >Developers</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.playstation.com/en-vn/legal/playstation-store-cancellation-policy"
+                      target="blank"
+                      >PS Store cancellation policy</a
+                    >
+                  </li>
+                </ul>
+            </div>
+            <div class="col col-1-of-3 footer__form">
+            <h1 class="footer__heading">Contact us</h1>
+            <div class="footer__form-group">        
+                <input type="text" class="footer__form-input" id="email" required />
+                <label for="email" class="footer__form-label">Your Email Address</label>
+              </div>
+              <div class="footer__form-group">
+                <textarea id = "message" class = "footer__form-textarea" required></textarea>
+                <label for="message" class="footer__form-label">Your message...</label>
+              </div>
+            <button class="btn footer__btn"><i class="fas fa-paper-plane"></i>Send</button>
+            </div>
+            <div class="col col-1-of-3 footer__follow-us">
+            <h1 class="footer__heading">Follow us</h1>
+            <ul>
+                <li>
+                <a href="https://www.facebook.com/playstation" target="blank"
+                    ><i class="fab fa-facebook-square"></i
+                ></a>
+                </li>
+                <li>
+                <a href="https://twitter.com/PlayStation" target="blank"
+                    ><i class="fab fa-twitter-square"></i
+                ></a>
+                </li>
+                <li>
+                <a href="https://www.youtube.com/user/playstation" target="blank"
+                    ><i class="fab fa-youtube-square"></i
+                ></a>
+                </li>
+                <li>
+                <a href="https://www.instagram.com/PlayStation/ " target="blank"
+                    ><i class="fab fa-instagram -square"></i
+                ></a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="footer__author">&copy; Coding poets | Designed by Tuan Hung</div>
+      </section>
+</body>
+</html>

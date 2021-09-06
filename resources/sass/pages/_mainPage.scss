@@ -1,0 +1,701 @@
+.design-intro {
+  margin-top: 30rem;
+  opacity: 0;
+  transition: all 2s ease-in;
+  &__heading {
+    position: relative;
+    text-transform: uppercase;
+    top: 13%;
+    text-align: center;
+    @include tablet {
+      top: 20%;
+    }
+    &--unique {
+      font-size: 4.5rem;
+      letter-spacing: 1.5rem;
+    }
+    &--design {
+      font-size: 2rem;
+      letter-spacing: 0.7rem;
+    }
+  }
+  &__content {
+    width: 60%;
+    top: 25%;
+    position: relative;
+    margin: auto;
+    @include mobile {
+      top: 18%;
+    }
+  }
+  &__item {
+    float: left;
+    position: relative;
+    display: inline-block;
+    width: calc((100% - #{$gutter-horizontal-design-intro}) / 2);
+    &:not(:last-child) {
+      margin-right: calc(#{$gutter-horizontal-design-intro});
+    }
+    @include mobile {
+      width: 100%;
+      margin-bottom: 10%;
+    }
+    @include tablet {
+      width: 100%;
+      margin-bottom: 20%;
+    }
+  }
+
+  &__product {
+    z-index: 1;
+    position: relative;
+    @include mobile {
+      min-width: 100px;
+      max-width: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include tablet {
+      min-width: 180px;
+      max-width: 230px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    & img {
+      transition: all 1s ease;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: -1;
+      transition: 1s;
+      @include mobile {
+        opacity: 1;
+        opacity: 0.6;
+        filter: blur(5.8rem);
+      }
+      @include tablet {
+        opacity: 1;
+        opacity: 0.6;
+        filter: blur(5.8rem);
+      }
+    }
+    &:hover {
+      .design-intro__descript {
+        left: 10%;
+        &::before {
+          transition: transform 0.5s;
+          transform-origin: top left;
+          transform: scale(1);
+        }
+        &::after {
+          transition: transform 0.5s;
+          transform-origin: bottom right;
+          transform: scale(0);
+        }
+      }
+      & .white-edition {
+        filter: brightness(110%);
+        opacity: 1;
+        transform: translateY(-5%);
+      }
+      & .black-edition {
+        filter: brightness(170%);
+        opacity: 1;
+        transform: translateY(-5%);
+      }
+
+      &::after {
+        opacity: 0.6;
+        filter: blur(5.8rem);
+      }
+    }
+  }
+  .white-edition {
+    .design-intro__descript {
+      color: $color-white;
+      &::after {
+        border: 1px solid $color-white;
+      }
+    }
+    &::after {
+      background: linear-gradient(
+        to top,
+        $color-product-bg-light,
+        $color-product-bg-dark
+      );
+    }
+  }
+  .black-edition {
+    .design-intro__descript {
+      color: $color-blue-dark;
+      &::after {
+        border: 1px solid $color-blue-dark;
+      }
+    }
+    &::after {
+      background: linear-gradient(
+        to top,
+        $color-product-bg-blue,
+        $color-product-bg-dark
+      );
+    }
+  }
+  &__descript {
+    padding: 1.2rem 1.5rem 1.5rem 1rem;
+    top: 16%;
+    left: 7%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    transition: 0.7s;
+    position: absolute;
+    @include mobile {
+      left: -2%;
+    }
+    &-text--sm {
+      position: relative;
+      top: 0.4rem;
+      left: 2.5rem;
+      font-size: 1.3rem;
+    }
+    &-text--lg {
+      position: relative;
+      font-size: 3.1rem;
+      font-weight: bold;
+    }
+    &::before,
+    &::after {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.5s;
+      @include mobile {
+        border: none !important;
+      }
+      @include tablet {
+        border: none !important;
+      }
+    }
+    &::before {
+      content: "";
+      background-image: linear-gradient(
+        45deg,
+        $color-btn2-light,
+        $color-btn2-dark
+      );
+      transform-origin: bottom right;
+      transform: scale(0);
+      opacity: 0.3;
+      @include mobile {
+        transform: scale(1);
+      }
+      @include tablet {
+        transform: scale(1);
+      }
+    }
+    &::after {
+      content: "";
+      transform-origin: top left;
+    }
+  }
+
+  &__background {
+    opacity: 0.6;
+    &::before {
+      @include before-transparent;
+    }
+  }
+}
+
+.power-intro {
+  display: flex;
+  opacity: 0;
+  transition: 0.5s;
+  @include mobile {
+    display: block;
+  }
+  @include tablet {
+    display: block;
+  }
+  &__right {
+    position: relative;
+    width: 62%;
+    top: 0;
+    @include mobile {
+      width: 100%;
+      top: 5%;
+    }
+    @include tablet {
+      width: 100%;
+      top: 5%;
+    }
+  }
+  &__heading {
+    position: relative;
+    top: 17%;
+    width: 35rem;
+    padding: 2rem;
+    margin: auto;
+    text-transform: uppercase;
+    text-align: center;
+    background: $color-details-bg;
+    &--play-has {
+      font-size: 1.5rem;
+      letter-spacing: 0.55rem;
+    }
+    &--no-limit {
+      font-size: 3.6rem;
+      letter-spacing: 0.67rem;
+    }
+  }
+  &__thumbnail {
+    &-group {
+      position: relative;
+      width: 100%;
+      top: 23%;
+      text-align: center;
+      @include mobile {
+        top: 2vh;
+      }
+      @include tablet {
+        top: 5vh;
+      }
+    }
+    &-item {
+      width: 30%;
+      display: inline-block;
+      position: relative;
+      transition: 1s;
+      cursor: pointer;
+      opacity: 0;
+      &:hover {
+        transition: 0.5s;
+        .icon-play {
+          background: $color-icon-play-red;
+        }
+      }
+      @include mobile {
+        width: 32%;
+      }
+      @include tablet {
+        width: 32%;
+      }
+    }
+    &--left {
+      transform: translate(10%, 50%);
+      z-index: 1;
+      &:hover {
+        transform: scale($scale-index-thumbnail) translate(30%, 50%);
+        z-index: 3;
+      }
+    }
+    &--center {
+      transform: translateY(-20%);
+      z-index: 2;
+      &:hover {
+        transform: scale($scale-index-thumbnail);
+      }
+    }
+    &--right {
+      transform: translate(-10%, 50%);
+      z-index: 1;
+      &:hover {
+        transform: scale($scale-index-thumbnail) translate(-30%, 50%);
+        z-index: 3;
+      }
+    }
+  }
+  &__lightning-speed {
+    position: relative;
+    top: 38%;
+    padding: 4%;
+    background: $color-details-bg;
+    text-align: center;
+    @include mobile {
+      top: 57vh;
+    }
+    @include tablet {
+      top: 57vh;
+    }
+  }
+
+  &__left {
+    width: 38%;
+    padding-top: 9rem;
+    position: relative;
+    left: 0;
+    top: 0;
+    text-align: center;
+    @include mobile {
+      width: 100%;
+      top: 22%;
+      position: absolute;
+    }
+    @include tablet {
+      width: 100%;
+      top: 30%;
+      position: absolute;
+    }
+  }
+  &__speed,
+  &__IO {
+    width: 80%;
+    margin: auto;
+    margin-top: 13%;
+    @include mobile {
+      margin-top: 3%;
+    }
+    @include tablet {
+      margin-top: 7%;
+    }
+  }
+  &__icon {
+    margin: auto;
+    width: 9.6rem;
+    filter: brightness(300%) hue-rotate(5deg);
+  }
+  &__descript {
+    margin: auto;
+    letter-spacing: 0.11rem;
+    &--main {
+      font-size: 2.2rem;
+      margin-bottom: 0.9rem;
+    }
+    &--sub {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__background {
+    filter: brightness(80%);
+  }
+}
+
+.feature-intro {
+  height: 80vh;
+  @include mobile {
+    height: 110vh;
+  }
+  @include tablet {
+    height: 100vh;
+  }
+  &__left {
+    position: relative;
+    width: 55%;
+    height: 100%;
+    @include mobile {
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 58%;
+    }
+    @include tablet {
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 55%;
+    }
+  }
+  &__heading {
+    &--main {
+      position: absolute;
+      font-size: 3.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.55rem;
+      left: 50%;
+      top: 7%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+    &--sub {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      bottom: 10%;
+      font-size: 2.2rem;
+      letter-spacing: 0.18rem;
+      @include mobile {
+        white-space: normal;
+        text-align: center;
+        transform: translateX(0);
+        left: 0%;
+      }
+    }
+  }
+  &__feature {
+    &-list {
+      width: 80%;
+      min-width: 290px;
+      height: 36%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0.1rem 1.3rem 0 #3d97ad;
+    }
+    &-item {
+      position: absolute;
+      text-align: center;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: 0.5s;
+      top: 50%;
+      transform: translateY(-68%);
+    }
+    &-img {
+      width: 12%;
+      position: relative;
+      transition: 0.5s;
+    }
+    &-descript--main {
+      position: relative;
+      font-size: 2.2rem;
+      letter-spacing: 0.22rem;
+    }
+    &-descript--sub {
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+      position: relative;
+    }
+    &--show {
+      opacity: 1 !important;
+    }
+  }
+  &__btn {
+    position: absolute;
+    left: 49%;
+    color: $color-primary-blue;
+    font-size: 2rem;
+    @include mobile {
+      left: 47.5%;
+    }
+    @include tablet {
+    }
+    &-back {
+      top: -30%;
+      transform: rotateZ(-90deg);
+      &:hover {
+        filter: brightness(120%);
+      }
+      &:active {
+        transform: scale(0.85) rotateZ(-90deg);
+      }
+    }
+    &-next {
+      top: 120%;
+      transform: rotateZ(90deg);
+      &:hover {
+        filter: brightness(120%);
+      }
+      &:active {
+        transform: scale(0.85) rotateZ(90deg);
+      }
+    }
+    &--lock {
+      filter: brightness(30%);
+      opacity: 0.6;
+      &:hover {
+        filter: brightness(30%);
+      }
+    }
+  }
+
+  &__right {
+    clip-path: ellipse(99% 75% at 100% 50%);
+    background-color: $color-black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    @include mobile {
+      clip-path: ellipse(95% 75% at 50% 105%);
+      width: 100%;
+      top: 42%;
+      height: 50%;
+    }
+    @include tablet {
+      clip-path: ellipse(95% 75% at 50% 105%);
+      width: 100%;
+      top: 33%;
+      height: 65%;
+    }
+    &-background {
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      &-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        filter: blur(0.8rem) brightness(70%);
+        &:not(:first-child) {
+          opacity: 0;
+        }
+      }
+    }
+    &-slide {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 40%;
+      box-shadow: 0rem 1rem 1.8rem #01091e;
+      overflow: hidden;
+      @include mobile {
+        top: 70%;
+      }
+      @include tablet {
+        top: 70%;
+      }
+      &-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        vertical-align: top;
+        &:not(:first-child) {
+          transform: scale(1.3);
+          opacity: 0;
+        }
+      }
+    }
+    .slide--show {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+.controller-intro {
+  &__heading {
+    position: relative;
+    font-size: 3.1rem;
+    letter-spacing: 0.31rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__left {
+    position: relative;
+    color: white;
+    width: 13%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(000, 000, 000, 0.6)
+    );
+    padding-top: 15%;
+    top: 0;
+    left: 5.5%;
+    @include mobile {
+      left: 10.5%;
+      width: 35%;
+      padding-top: 25%;
+    }
+    @include tablet {
+      left: 10.5%;
+      width: 25%;
+      padding-top: 25%;
+    }
+  }
+  &__btn {
+    top: 45%;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  &__feature {
+    width: 10rem;
+    position: absolute;
+    bottom: 17%;
+    @include mobile {
+      pointer-events: none;
+    }
+    @include tablet {
+      pointer-events: none;
+    }
+    &-descript {
+      &--main {
+        text-align: center;
+        font-size: 2.2rem;
+        letter-spacing: 0.3rem;
+        white-space: nowrap;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      &--sub {
+        position: absolute;
+        font-size: 1.7rem;
+        width: 38rem;
+        top: 36%;
+        right: 0;
+        padding: 4.5rem;
+        background: rgba($color-black, 0.6);
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+      }
+    }
+    &:hover {
+      animation: controller-intro__icon--rotate 0.5s infinite;
+      .controller-intro__icon {
+        filter: brightness(330%);
+      }
+      & + .controller-intro__feature-descript--sub {
+        opacity: 1;
+        visibility: visible;
+        right: 33%;
+        animation: controller-intro__descript--show 0.4s;
+      }
+    }
+  }
+
+  .feature1 {
+    left: 32%;
+    @include mobile {
+      transform: translateY(-41vh);
+      left: 63%;
+    }
+    @include tablet {
+      transform: translateY(-41vh);
+      left: 60%;
+    }
+  }
+  .feature2 {
+    right: 32%;
+    @include mobile {
+      transform: translateY(-13vh);
+      left: 63%;
+    }
+    @include tablet {
+      transform: translateY(-13vh);
+      left: 60%;
+    }
+  }
+  &__icon {
+    position: relative;
+    filter: brightness(300%) hue-rotate(5deg);
+  }
+
+  &__background {
+    &::after {
+      @include after-transparent;
+      height: 100vh;
+      opacity: 0.95;
+    }
+  }
+}

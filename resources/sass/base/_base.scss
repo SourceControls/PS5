@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: $color-white;
+}
+
+body {
+  background-color: $color-black;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  position: relative;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+header {
+  width: 100%;
+  height: 100vh;
+}
+
+p,
+i {
+  color: inherit;
+}
+img,
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

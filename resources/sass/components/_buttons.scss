@@ -1,0 +1,64 @@
+.btn {
+  font-family: "Share Tech", sans-serif;
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  background: none;
+  text-align: center;
+
+  &--style-1 {
+    padding: 0.6rem 1.6rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    transition: 0.5s;
+    p {
+      color: $color-primary-blue;
+      font-size: 1.8rem;
+      letter-spacing: 0.4rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: -1;
+      background-image: linear-gradient(
+        40deg,
+        $color-primary-dark,
+        $color-primary-light
+      );
+    }
+    &:hover {
+      &::after {
+        transition: 0.3s;
+        transition-delay: 0.4s;
+        opacity: 1;
+      }
+      .btn__light-ray--right-left {
+        left: 100%;
+      }
+      .btn__light-ray--left-right {
+        right: 100%;
+      }
+    }
+  }
+  &__light-ray--right-left,
+  &__light-ray--left-right {
+    position: absolute;
+    height: 0.15rem;
+    background: linear-gradient(90deg, transparent, #c2c49d);
+    width: 100%;
+    transition: 0.4s;
+  }
+  &__light-ray--right-left {
+    top: 0;
+    left: -100%;
+  }
+  &__light-ray--left-right {
+    bottom: 0;
+    right: -100%;
+  }
+}

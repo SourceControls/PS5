@@ -1,0 +1,40 @@
+@mixin before-transparent {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  left: 0;
+  background: linear-gradient(to bottom, black, transparent);
+}
+@mixin after-transparent {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, black, transparent);
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width + 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile-width + 1}) and (max-width: #{$tablet-width + 1}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: #{$laptop-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

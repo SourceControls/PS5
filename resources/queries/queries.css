@@ -1,0 +1,84 @@
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1023px) {
+  html {
+    font-size: 5px;
+  }
+
+  .edu .contact textarea {
+    font-size: 80%;
+  }
+  .contactus h2 {
+    font-size: 25px;
+  }
+  .edu h1 {
+    font-size: 35px;
+  }
+  .edu div h2 {
+    font-size: 20px;
+    margin: 10px auto;
+  }
+  .edu .contact .contactus a {
+    top: 7px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .edu {
+    font-size: 40%;
+  }
+  .edu .contact textarea {
+    font-size: 6px;
+  }
+  .edu h1 {
+    font-size: 20px;
+  }
+  .edu .content div {
+    padding: 5px 0px;
+  }
+  .edu div h2 {
+    font-size: 15px;
+    margin: 5px auto;
+  }
+  .edu .contact .contactus a {
+    top: 3px;
+    font-size: 60%;
+  }
+  .edu .content div:hover a {
+    transform: translate(0, -250px);
+  }
+  .edu .contact .comment p button {
+    padding: 3px 12px;
+    font-size: 6px;
+    margin: 6px;
+  }
+  .edu .contact .comment p button:hover {
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .edu .content div {
+    max-width: 48%;
+  }
+
+  .edu .content div:nth-child(3) {
+    clear: left;
+  }
+
+  .edu .contactus h2 {
+    font-size: 10px;
+    position: relative;
+    left: 10px;
+  }
+  .edu .contactus a {
+    position: relative;
+    left: 10px;
+  }
+  .edu .contactus h2::after {
+    opacity: 0;
+  }
+}

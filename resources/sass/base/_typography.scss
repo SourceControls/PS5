@@ -1,0 +1,47 @@
+html {
+  font-size: 10px;
+  font-family: "Share Tech", sans-serif;
+  @include mobile {
+    font-size: 7px;
+  }
+  @include tablet {
+    font-size: 8.5px;
+  }
+  @include desktop {
+    font-size: 15px;
+  }
+}
+.heading-primary {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  left: 50%;
+  top: 55%;
+  transform: translateX(-50%);
+  font-size: 3.5rem;
+  letter-spacing: 1.2rem;
+  &::after {
+    content: "";
+    width: 9rem;
+    height: 0.15rem;
+    position: absolute;
+    transform: translate(-145%, 0);
+    bottom: -1rem;
+    background: linear-gradient(to right, #403b4a, #c2c49d);
+    animation: heading-primary-after 2s infinite,
+      heading-primary-after-lighten 5s;
+  }
+  &--play {
+    position: relative;
+    margin-right: 1rem;
+    animation: begin-heading-primary--up-down 4.5s;
+  }
+  &--station {
+    position: relative;
+    animation: begin-heading-primary--right-left 4.5s;
+  }
+}
+
+.details {
+}
